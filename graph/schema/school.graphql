@@ -1,0 +1,34 @@
+# Query
+# Response data format
+type Token {
+    value: String!
+    errors: [ERRORS]
+}
+
+type School {
+    id: Int!
+    teacher:Teacher! @goField(forceResolver:true)
+}
+
+type Teacher {
+    id: Int!
+    name: String!
+}
+
+type Student {
+    id: Int!
+    teacher(id:Int!): Teacher @goField(forceResolver:true)
+}
+
+# Mutation
+# Response data format
+type Result {
+    status: Boolean!
+    errors: [ERRORS]
+}
+
+type ERRORS {
+    code: Int!
+    message: String!
+    description: String!
+}

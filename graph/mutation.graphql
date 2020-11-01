@@ -1,0 +1,7 @@
+# Mutation List
+type Mutation {
+    "用户认证"
+    signup: Token! @hasRole(role: ADMIN)
+    "清单管理"
+    log: Result!
+}

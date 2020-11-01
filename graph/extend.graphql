@@ -1,0 +1,22 @@
+#extend schema {
+#    query: Query
+#    mutation: Mutation
+#}
+
+extend type Mutation {
+    singleUpload(file: Upload!): File!
+    singleUploadWithPayload(req: UploadFile!): File!
+    multipleUpload(files: [Upload!]!): [File!]!
+    multipleUploadWithPayload(req: [UploadFile!]!): [File!]!
+}
+
+extend type Query {
+    getSchool(schoolId:Int!):School!
+    getTeachers(id:[Int!]):[Teacher]!
+    schools:[School]
+}
+
+
+extend type Student {
+    Address: String!
+}

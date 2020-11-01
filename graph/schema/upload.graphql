@@ -1,0 +1,11 @@
+type File {
+    id: Int!
+    name: String!
+    content: String!
+    contentType: String!
+}
+
+input UploadFile {
+    id: Int!
+    file: Upload!
+}

@@ -1,0 +1,14 @@
+type User {
+    id: Int!
+    name: String! @deprecated(reason: "name is deprecated")
+    "生日"
+    genre: [String]
+    status: YesNo
+    state: MyCustomBooleanScalar
+}
+
+input UserInput @goModel(model: "graphql-server/internal/custom_model.UserInput") {
+    email: String!
+    firstName: String!
+    lastName: String! @goField(name:"LastName1")
+}

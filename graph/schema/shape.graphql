@@ -1,0 +1,9 @@
+type Circle implements Shape {
+    radius: Float
+    area: Float @skip(if: true)
+}
+
+type Square implements Shape {
+    edge: Int
+    area: Float
+}

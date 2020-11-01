@@ -1,0 +1,7 @@
+# Query List
+type Query {
+    "用户认证"
+    signin: Token! @hasRole(role: ADMIN)
+    shapes:Shapes
+    school:School
+}

@@ -1,0 +1,4 @@
+# Subscription List
+type Subscription {
+    message(typ:String!): Message!
+}
